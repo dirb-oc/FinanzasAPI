@@ -79,10 +79,15 @@ WSGI_APPLICATION = 'Finanzas_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'finanzas_7j9p',
+        'USER': 'finanzas_7j9p_user',
+        'PASSWORD': 'n7a1xrbvBDefYIXFmHGMLkB39eAk5n0f',
+        'HOST': 'dpg-d0md5jm3jp1c7388inj0-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation

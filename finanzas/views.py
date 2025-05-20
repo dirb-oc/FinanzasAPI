@@ -36,3 +36,7 @@ class AhorroViewSet(BaseUserQuerySetViewSet):
 class GastoFijoViewSet(BaseUserQuerySetViewSet):
     queryset = GastoFijo.objects.all()
     serializer_class = GastoFijoSerializer
+
+class ObjetivoViewSet(BaseUserQuerySetViewSet):
+    queryset = ObjetivosFinancieros.objects.all()
+    serializer_class = ObjetivoSerializer

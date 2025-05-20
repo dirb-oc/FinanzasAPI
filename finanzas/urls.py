@@ -8,6 +8,7 @@ router.register(r'gastos', GastoViewSet, basename='gasto')
 router.register(r'ahorros', AhorroViewSet)
 router.register(r'gastosfijos', GastoFijoViewSet)
 router.register(r'frecuencia', FrecuenciaSetViewSet)
+router.register(r'objetivo', ObjetivoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
