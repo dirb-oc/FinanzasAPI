@@ -17,13 +17,13 @@ class AhorroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ahorro
         fields = ['id', 'cantidad', 'fecha','nombre', 'fecha_Final']
-        read_only_fields = ['id', 'fecha']
+        read_only_fields = ['id','usuario', 'activo']
 
 class GastoFijoSerializer(serializers.ModelSerializer):
     class Meta:
         model = GastoFijo
         fields = ['id', 'cantidad','frecuencia']
-        read_only_fields = ['id', 'fecha']
+        read_only_fields = ['id', 'fecha','activo']
 
 class FrecuenciaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -34,4 +34,4 @@ class ObjetivoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ObjetivosFinancieros 
         fields = ['id', 'descripcion','meta','actual']
-        read_only_fields = ['id', 'usuario']
+        read_only_fields = ['id', 'usuario','activo']
