@@ -5,7 +5,7 @@ class IngresoSerializer(serializers.ModelSerializer):
     cantidad = serializers.DecimalField(max_digits=10, decimal_places=2, coerce_to_string=False)
     class Meta:
         model = Ingreso
-        fields = ['id', 'cantidad', 'fecha']
+        fields = ['id', 'cantidad', 'fecha', 'descripcion']
         read_only_fields = ['id','usuario', 'activo']
 
 class GastoSerializer(serializers.ModelSerializer):
