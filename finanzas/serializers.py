@@ -26,8 +26,8 @@ class GastoFijoSerializer(serializers.ModelSerializer):
     cantidad = serializers.DecimalField(max_digits=20, decimal_places=2, coerce_to_string=False)
     class Meta:
         model = GastoFijo
-        fields = ['id', 'cantidad','frecuencia']
-        read_only_fields = ['id', 'fecha','activo']
+        fields = ['id', 'cantidad', 'descripcion','frecuencia']
+        read_only_fields = ['id','usuario','activo']
 
 class FrecuenciaSerializer(serializers.ModelSerializer):
     class Meta:
