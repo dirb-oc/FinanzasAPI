@@ -7,7 +7,7 @@ class Frecuencia(models.Model):
 class Ingreso(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     descripcion = models.CharField(max_length=255)
-    cantidad = models.DecimalField(max_digits=10, decimal_places=2)
+    cantidad = models.DecimalField(max_digits=20, decimal_places=2)
     fecha = models.DateTimeField()
     activo = models.BooleanField(default=True)
 
@@ -17,7 +17,7 @@ class Ingreso(models.Model):
 class Gasto(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.PROTECT)
     descripcion = models.CharField(max_length=255)
-    cantidad = models.DecimalField(max_digits=10, decimal_places=2)
+    cantidad = models.DecimalField(max_digits=20, decimal_places=2)
     fecha = models.DateTimeField()
     activo = models.BooleanField(default=True)
 
@@ -34,7 +34,7 @@ class Ahorro(Ingreso):
 class GastoFijo(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.PROTECT)
     descripcion = models.CharField(max_length=255)
-    cantidad = models.DecimalField(max_digits=10, decimal_places=2)
+    cantidad = models.DecimalField(max_digits=20, decimal_places=2)
     frecuencia = models.ForeignKey(Frecuencia, on_delete=models.PROTECT)
     activo = models.BooleanField(default=True)
 
@@ -44,8 +44,8 @@ class GastoFijo(models.Model):
 class ObjetivosFinancieros(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.PROTECT)
     descripcion = models.CharField(max_length=255)
-    meta = models.DecimalField(max_digits=10, decimal_places=2)
-    actual = models.DecimalField(max_digits=10, decimal_places=2)
+    meta = models.DecimalField(max_digits=20, decimal_places=2)
+    actual = models.DecimalField(max_digits=20, decimal_places=2)
     activo = models.BooleanField(default=True)
 
     def __str__(self):
