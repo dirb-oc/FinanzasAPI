@@ -44,6 +44,7 @@ class IngresoRangoFechaAPIView(APIView):
 
             ingresos = Ingreso.objects.filter(
                 usuario=request.user,
+                activo=True,
                 fecha__range=[fecha_inicio, fecha_fin]
             )
 
@@ -73,6 +74,7 @@ class GastoRangoFechaAPIView(APIView):
 
             gastos = Gasto.objects.filter(
                 usuario=request.user,
+                activo=True,
                 fecha__range=[fecha_inicio, fecha_fin]
             )
 
